@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+        <title>JSP Page</title>
+        
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    </head>
+    
+    <body>
+        
+        <div class="container"> <div class="row">  <div class="col-md-12">      
+                <h1>Calculadora</h1>
+                <form method="POST"  action="Resultado">
+                    <div class="form-group">
+                        <label for="numero1">Numero 1</label> 
+                        <input type="text" class="form-control" id="numero1" name="numero1" placeholder="Numero 1"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero2">Numero 2</label>
+                        <input type="text" class="form-control" id="numero2" name="numero2" placeholder="Numero 2"/>
+                    </div>
+                        <input type="radio" name="opcion" value="suma"/> +<br>
+                        <input type="radio" name="opcion" value="resta"/> -<br>
+                        <input type="radio" name="opcion" value="multiplicacion"/> *<br>
+                        <input type="radio" name="opcion" value="division"/> <br>
+                    
+                   <button type="submit" class="btn btn-primary">Calcular</button>                   
+               </form>
+        </div></div></div>
+    
+
+        
+    </body>
+
+</html>
