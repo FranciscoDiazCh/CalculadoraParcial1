@@ -22,9 +22,9 @@
                 <div class="col-md-12">
                     
                     <h3> Calculadora </h3>
-                    Numero 1 : <%= request.getParameter("numero1")%><br>
-                    Numero 2 : <%= request.getParameter("numero2")%><br>
-                    Resultado  : <%= request.getParameter("resultado") %><br>
+                    Numero 1 : <%= request.getAttribute("numero1")%><br>
+                    Numero 2 : <%= request.getAttribute("numero2")%><br>
+                    Resultado  : <%= request.getAttribute("resultado") %><br>
                     
                 </div>
             </div>

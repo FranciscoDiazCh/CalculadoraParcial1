@@ -74,36 +74,36 @@ public class Resultado extends HttpServlet {
         
         float numero1 = Float.parseFloat(request.getParameter("numero1"));
         float numero2 = Float.parseFloat(request.getParameter("numero2"));
-        float resultado;
-        String opcion = request.getParameter("opcion");
+        float resultado = 0;
+        int opcion = Integer.parseInt(request.getParameter("opcion"));
         
-        switch(opcion){
-            case "suma":
+       switch(opcion){
+            case 1:
                  resultado = numero1 + numero2;
             break;
-            case "resultado":
+            case 2:
                  resultado = numero1 - numero2;
             break;
-            case "multiplicacion":
+            case 3:
                  resultado = numero1 * numero2;
             break;
-            case "division":
+            case 4:
                   resultado = numero1 / numero2;
             break;
             default:
                 System.out.print("Error");
                 resultado = 0;
         }
-        request.setAttribute("numero1", numero1);
-        request.setAttribute("numero2", numero2);
-        request.setAttribute("resultado", resultado);
+        request.setAttribute("numero1", String.valueOf(numero1));
+        request.setAttribute("numero2", String.valueOf(numero2));
+        request.setAttribute("resultado", String.valueOf(resultado));
         
         RequestDispatcher view = request.getRequestDispatcher("ver_resultado.jsp");
         view.forward(request, response);
     }
 
     /**
-     * Returns a short description of the servlet.
+     * Returns a short description of the servlet
      *
      * @return a String containing servlet description
      */
